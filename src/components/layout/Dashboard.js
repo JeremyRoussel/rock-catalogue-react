@@ -38,6 +38,8 @@ const theme = createMuiTheme({
   }
 });
 
+// ./components/layout/Dashboard.js
+
 export default function Dashboard(props) {
  
   const classes = useStyles();

@@ -1,3 +1,5 @@
+// index.js
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -27,10 +29,7 @@ ReactDOM.render(
           <Route exact path="/" component={ App } />
           <Route exact path="/mockhome" component={ MockHome } />
 
-        
-
-
-          <Route component={ MockHome } />
+          <Route component={ App } />
         </Switch>
       </Dashboard>
     </BrowserRouter>

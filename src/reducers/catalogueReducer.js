@@ -1,3 +1,5 @@
+// ./reducers/catalogueReducer.js
+
 import * as types from '../actions/catalogueActionTypes';
 import initialState from './initialState';
 

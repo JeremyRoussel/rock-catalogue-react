@@ -1,10 +1,9 @@
+// ./components/layout/listItems.js
+
 import React from 'react';
 
 // Router Components
 import { Link as RouterLink } from 'react-router-dom';
-
-//Material-UI components
-// import Link from '@material-ui/core/Link';
 
 // Material Ui List Elements
 import ListItem from '@material-ui/core/ListItem';

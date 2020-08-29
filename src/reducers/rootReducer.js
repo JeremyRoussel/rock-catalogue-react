@@ -1,3 +1,5 @@
+// ./reducers/rootReducer
+
 import {combineReducers} from 'redux';
 import catalogue from './catalogueReducer';
 

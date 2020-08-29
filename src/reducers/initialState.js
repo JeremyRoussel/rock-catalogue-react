@@ -1,3 +1,5 @@
+// ./reducers/initialState.js
+
 let initialState = {
     catalogue: []
 }

@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom';
 // Redux and Thunk Dependencies
 import {Provider} from 'react-redux'
 import configureStore from './store/configureStore'
-// import getSamples from './actions/getSamples'
+import getCatalogue from './actions/getCatalogue'
 
 // React-Router-Dom components
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
@@ -15,9 +15,10 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import App from './App';
 import Dashboard from './components/layout/Dashboard'
 import MockHome from './components/examples/MockHome'
+import Catalogue from './components/Catalogue'
 
 const store=configureStore();
-// store.dispatch(getSamples())
+store.dispatch(getCatalogue())
 
 
 ReactDOM.render(
@@ -26,7 +27,7 @@ ReactDOM.render(
     <BrowserRouter>
       <Dashboard>
         <Switch>
-          <Route exact path="/" component={ App } />
+          <Route exact path="/" component={ Catalogue } />
           <Route exact path="/mockhome" component={ MockHome } />
 
           <Route component={ App } />

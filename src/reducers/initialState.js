@@ -1,7 +1,7 @@
 // ./reducers/initialState.js
 
-let initialState = {
-    catalogue: []
+class initialState {
+    static catalogue = []
 }
 
 export default initialState

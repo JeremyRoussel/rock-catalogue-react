@@ -3,12 +3,10 @@
 import * as types from '../actions/catalogueActionTypes';
 import initialState from './initialState';
 
-let catalogue = (state=initialState, action) => {
+let catalogue = (state=initialState.catalogue, action) => {
     switch (action.type) {
         case types.LOAD_CATALOGUE_SUCCESS:
-            return {...state,
-                catalogue: action.catalogue
-            }
+            return action.catalogue
         
         default:
             return state
@@ -16,3 +14,5 @@ let catalogue = (state=initialState, action) => {
 }
 
 export default catalogue
+
+

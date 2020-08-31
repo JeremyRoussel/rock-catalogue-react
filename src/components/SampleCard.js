@@ -15,15 +15,10 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
-// Component Imports
-// import Title from './examples/Title';
-
 //Redux Connection
 import {connect} from 'react-redux'
 
-
-
-
+// ./components/SampleCard.js
 
 class SampleCard extends Component {
     render(){

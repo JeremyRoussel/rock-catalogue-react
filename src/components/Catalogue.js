@@ -12,9 +12,9 @@ import {connect} from 'react-redux'
 import PropTypes from 'prop-types'
 
 // Component Imports
-// import ImgMediaCard from './SampleCard2'
 import SampleCard from './SampleCard'
 
+// ./components/Catalogue.js
 
 class Catalogue extends Component {
 

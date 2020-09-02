@@ -11,18 +11,13 @@ class catalogueActions {
         return {type: types.LOAD_CATALOGUE_SUCCESS, catalogue}
     }
 
+    static addSampleSuccess(sample) {
+        return {type: types.ADD_SAMPLE_SUCCESS, sample}
+    }
+
+    static putSampleSuccess(sample) {
+        return {type: types.PUT_SAMPLE_SUCCESS, sample}
+    }
 }
 
 export default catalogueActions
-
-// static addContactSuccess(contacts) {
-    //     return {type: types.ADD_CONTACTS_SUCCESS, contacts}
-    // }
-
-    // static editContactSuccess(contacts) {
-    //     return {type: types.EDIT_CONTACTS_SUCCESS, contacts}
-    // }
-
-    // static deleteContactSuccess(contacts) {
-    //     return {type: types.DELETE_CONTACTS_SUCCESS, contacts}
-    // }

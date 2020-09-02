@@ -3,7 +3,7 @@
 import React from 'react';
 
 // Router Components
-import { Link as RouterLink } from 'react-router-dom';
+import { NavLink as RouterLink } from 'react-router-dom';
 
 // Material Ui List Elements
 import ListItem from '@material-ui/core/ListItem';
@@ -20,25 +20,25 @@ import HomeIcon from '@material-ui/icons/Home';
 // Menu items for SideNav / Drawer
 export const mainListItems = (
   <div>
-    <ListItem button component={RouterLink} to="/">
+    <ListItem button component={RouterLink} to="/" activeClassName="hurray">
       <ListItemIcon>
         <AppsIcon />
       </ListItemIcon>
       <ListItemText primary="Home" />
     </ListItem>
-    <ListItem button component={RouterLink} to="/">
+    <ListItem button component={RouterLink} to="/" activeClassName="hurray">
       <ListItemIcon>
         <AssignmentIcon />
       </ListItemIcon>
       <ListItemText primary="Samples" />
     </ListItem>
-    <ListItem button component={RouterLink} to="/">
+    <ListItem button component={RouterLink} to="/" activeClassName="hurray">
       <ListItemIcon>
         <BallotIcon />
       </ListItemIcon>
       <ListItemText primary="Projects" />
     </ListItem>
-    <ListItem button component={RouterLink} to="/mockhome">
+    <ListItem button component={RouterLink} to="/mockhome" activeClassName="hurray">
       <ListItemIcon>
         <HomeIcon />
       </ListItemIcon>

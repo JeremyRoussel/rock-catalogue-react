@@ -9,17 +9,17 @@ import configureStore from './store/configureStore'
 import getCatalogue from './actions/getCatalogue'
 
 // React-Router-Dom components
-import {BrowserRouter, Switch, Route} from 'react-router-dom'
+import {BrowserRouter, Switch, Route, Redirect} from 'react-router-dom'
 
-// Import Dashboard for base layout
+// Import Components
 import App from './App';
 import Dashboard from './components/layout/Dashboard'
 import MockHome from './components/examples/MockHome'
 import Catalogue from './components/Catalogue'
+import SampleForm from './components/SampleForm'
 
 const store=configureStore();
 store.dispatch(getCatalogue())
-
 
 ReactDOM.render(
 
@@ -29,6 +29,15 @@ ReactDOM.render(
         <Switch>
           <Route exact path="/" component={ Catalogue } />
           <Route exact path="/mockhome" component={ MockHome } />
+          
+          <Route path="/sample/:id" >
+            {/* <div>Hello</div><br /> */}
+            <SampleForm />
+          </Route>
+
+          <Route path="/sample(/)?" >
+            <Redirect to="/" />
+          </Route>
 
           <Route component={ App } />
         </Switch>

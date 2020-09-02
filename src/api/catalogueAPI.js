@@ -12,24 +12,35 @@ class catalogueAPI {
             .catch(error => error)
     }
 
+    // sampleBody of type { id: int, name: "", project: "", user: int, field: "", well: "", thumbnail: ""}
+    static addSample(sampleBody){
+        return fetch('http://localhost:3001/catalogue', {
+            method: 'post',
+            headers: {"Content-Type": 'application/json'},
+            body: sampleBody
+        })
+        .then(response => response.json())
+        .catch(error => error)
+    }
+
+    // ./api/catalogueAPI
+
+    // sampleBody of type { id: int, name: "", project: "", user: int, field: "", well: "", thumbnail: ""}
+    static putSample(sampleBody){
+        return fetch('http://localhost:3001/catalogue', {
+            method: 'put',
+            headers: {"Content-Type": 'application/json'},
+            body: sampleBody
+        })
+        .then(response => response.json())
+        .catch(error => error)
+    }
+
 }
 
 export default catalogueAPI
 
 
-
-    // // contactBody of type: { first: "", last: "", email: "", phone: "", location: "", hobby: "" }
-
-    // static addContact(contactBody){
-    //     return fetch('http://localhost:3001/crud', {
-    //         method: 'post',
-    //         headers: {
-    //           'Content-Type': 'application/json'
-    //         },
-    //         body: contactBody})
-    //         .then(response => response.json())
-    //         .catch(error => error)
-    // }
 
     // // contactBody of type: { id: "", first: "", last: "", email: "", phone: "", location: "", hobby: "" }
 

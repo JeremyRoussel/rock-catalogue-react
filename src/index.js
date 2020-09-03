@@ -17,6 +17,7 @@ import Dashboard from './components/layout/Dashboard'
 import MockHome from './components/examples/MockHome'
 import Catalogue from './components/Catalogue'
 import SampleForm from './components/SampleForm'
+import ImageCards from './components/ImageCards'
 
 const store=configureStore();
 store.dispatch(getCatalogue())
@@ -31,8 +32,8 @@ ReactDOM.render(
           <Route exact path="/mockhome" component={ MockHome } />
           
           <Route path="/sample/:id" >
-            {/* <div>Hello</div><br /> */}
             <SampleForm />
+            <ImageCards />
           </Route>
 
           <Route path="/sample(/)?" >

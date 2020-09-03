@@ -11,11 +11,11 @@ let catalogue = (state=initialState.catalogue, action) => {
             return action.catalogue
         
         case types.ADD_SAMPLE_SUCCESS:
-            return [...state, action.sample]
+            return [...state, ...action.sample]
         
         case types.PUT_SAMPLE_SUCCESS:
-            return [...state.filter(sample => sample.id !== action.sample.id),
-                action.sample]
+            return [...state.filter(sample => sample.id !== action.sample[0].id),
+                ...action.sample]
 
         default:
             return state

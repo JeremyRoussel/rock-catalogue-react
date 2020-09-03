@@ -110,14 +110,18 @@ function SampleForm() {
         <div id="Loading">
             Loading Error?
         </div>
-    ) : ( 
+    ) : (
+        <> 
             <Grid item xs={12} >
                 <Paper className={classes.paper} >
   
-                    <Typography variant="body1" component="h2" style={{margin: 10, marginTop: 0}}>
-                        <br />Sample Information
+                    <Typography variant="body1" component="h2" align="center" >
+                        Sample Information
                     </Typography>
-
+                </Paper>
+            </Grid>
+            <Grid item xs={12} >
+                <Paper className={classes.paper} >
                     <form className={classes.root} noValidate autoComplete="off" onSubmit={submitAction} >
                         <div >
                             <TextField
@@ -174,6 +178,7 @@ function SampleForm() {
                     </form>
                 </Paper>
             </Grid>
+        </>
     )
 }
 

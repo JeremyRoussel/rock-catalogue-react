@@ -2,7 +2,6 @@
 
 import React, {useEffect, useState} from 'react'
 import SampleImage from './SampleImage'
-// import MakeQuerablePromise from '../functions/queryPromise'
 
 // Route Hooks
 // import { useRouteMatch, useHistory} from 'react-router-dom'
@@ -10,7 +9,6 @@ import { useRouteMatch } from 'react-router-dom'
 
 // Redux Hooks
 // import {useSelector, useDispatch} from 'react-redux'
-// import {useSelector } from 'react-redux'
 
 // Action Creators
 
@@ -21,14 +19,8 @@ import Grid from '@material-ui/core/Grid'
 import Paper from '@material-ui/core/Paper'
 import Typography from '@material-ui/core/Typography'
 import { DropzoneArea } from 'material-ui-dropzone'
-// import Card from '@material-ui/core/Card'
-// import TextField from '@material-ui/core/TextField';
-// import Button from '@material-ui/core/Button';
-
-
 
 // Initialize Sample Information
-// const initSample = { field: "", id: 0, name: "", project: "", thumbnail: "", user: 1, well: "" }
 const initImages = []
 
 // Create Styles Hook for Material-UI
@@ -60,7 +52,6 @@ function ImageCards() {
     const [isLoading, setIsLoading] = useState(true)
     const [isError, setIsError] = useState(true)
     const [sampleImages, setSampleImages] = useState(initImages)
-    // const [localSample, setLocalSample] = useState(initSample)
 
 
     // Define dispatch
@@ -69,44 +60,7 @@ function ImageCards() {
     // Identify current sample
     let matchID = useRouteMatch("/sample/:id").params.id;
 
-    // Pull sample information from global state
-    // const sample = useSelector(state => state.catalogue.find(item => {
-    //     return (item.id.toString() === matchID)
-    // }))
-
-    // Make API request for list of images from a particular sample if not on add sample page
-
-    // if (matchID !== 'add' && sampleImages === []){
-    //     let fetchURL = 'http://localhost:3001/images/' + matchID
-    //     const imageList = fetch(fetchURL).then(response => response.json()).then(result => setSampleImages(result))
-    //     const query = MakeQuerablePromise(imageList)
-    // } else {
-    //     // const imageList = []
-    // }
-
-
-    // Submit New Image
-    // const submitAction = e => {
-    //     e.preventDefault()
-
-    // }
-
-    // On Load or state update, modify state conditions
-    // useEffect(() => {
-
-    //     // if sample was found, set loading to false and load store data into local state
-    //     if (sample !== undefined) {
-    //         setIsLoading(false)
-    //         setLocalSample(sample)
-    //         console.log(sampleImages)
-    //     }
-    //     // if matchID = 'add', ignore ImageCards entirely
-    //     else if (matchID === "add") {
-    //         setIsLoading(true)
-    //     }
-    //     // re-render on changes to sample, matchID, imageList
-    // }, [sample, matchID, sampleImages])
-    
+   
     // Create Array of JSX Card Elemnts of the images
     const imgElementArray = sampleImages.map(item => {
         return  <Grid item xs={12} md={4} lg={3} key={item.id}> <SampleImage imageItem={item} /> </Grid>

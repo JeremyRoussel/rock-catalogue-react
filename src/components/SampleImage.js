@@ -23,6 +23,8 @@ const SampleImage = ({imageItem}) => {
             console.log('Copying Unsupported on this Browser')
         }
   }
+    // use string manipulation to get the image name
+    const name = imageItem.file_loc.split('/').pop().split('.').shift()
 
     return (
         <Card >
@@ -30,13 +32,13 @@ const SampleImage = ({imageItem}) => {
                 <CardMedia
                 component="img"
                 alt={imageItem.sampleID}
-                height="200"
+                height="256"
                 image={imageItem.file_loc}
                 title={imageItem.sampleID}
                 />
                 <CardContent>
                     <Typography gutterBottom variant="body1" component="h5">
-                        Copy Img URL
+                        {name}
                     </Typography>
                 </CardContent>
             </CardActionArea>
@@ -45,3 +47,5 @@ const SampleImage = ({imageItem}) => {
 }
 
 export default SampleImage
+
+

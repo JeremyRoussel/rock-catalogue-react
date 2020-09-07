@@ -30,6 +30,8 @@ class SampleCard extends Component {
                 state: {sample: sample}
             }
 
+            // let imgURL = 'http://localhost:3001/thin-sections/' + sample.thumbnail + '.png'
+
             // if (sample.thumbnail !== null || sample.thumbnail !== "null"){
 
             // }else {

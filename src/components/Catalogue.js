@@ -41,10 +41,15 @@ class Catalogue extends Component {
 
     render() {
 
+        // order samples by sampleID
+        let sampleOrder = this.props.catalogue.sort((a,b) => a.sampleID - b.sampleID)
         // map catalogue to list of card components
-        const samples = this.props.catalogue.map(item => {
+        let samples = sampleOrder.map(item => {
             return  <Grid item xs={12} md={4} lg={3} key={item.id}> <SampleCard sample={item} /> </Grid>
         })
+
+        let localURL = "http://ec2-18-191-206-123.us-east-2.compute.amazonaws.com/"
+        // let localURL = "http://localhost:3001/"
 
 
         return (
@@ -59,7 +64,7 @@ class Catalogue extends Component {
                             component="img"
                             alt="Add New Sample"
                             height="200"
-                            image="http://localhost:3001/null.png"
+                            image={localURL + "null.png"}
                             title="Add New Sample"
                             />
                             <CardContent>

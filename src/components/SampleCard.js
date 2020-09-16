@@ -30,13 +30,11 @@ class SampleCard extends Component {
                 state: {sample: sample}
             }
 
-            // let imgURL = 'http://localhost:3001/thin-sections/' + sample.thumbnail + '.png'
+            let localURL = "http://ec2-18-191-206-123.us-east-2.compute.amazonaws.com/thin-sections/"
+            // let localURL = "http://localhost:3001/thin-sections/"
 
-            // if (sample.thumbnail !== null || sample.thumbnail !== "null"){
+            let imgURL = localURL + sample.thumbnail + '.png'
 
-            // }else {
-            //     sample.thumbnail = ""
-            // }
 
             return (
                 <React.Fragment>
@@ -46,7 +44,7 @@ class SampleCard extends Component {
                             component="img"
                             alt={sample.name}
                             height="200"
-                            image={sample.thumbnail}
+                            image={imgURL}
                             title={sample.name}
                             />
                             <CardContent>

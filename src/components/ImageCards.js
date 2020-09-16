@@ -36,7 +36,10 @@ const useStyles = makeStyles((theme) => ({
         width: '25%'
     }
 
-  }));
+}));
+
+let localURL = "http://ec2-18-191-206-123.us-east-2.compute.amazonaws.com/images/"
+// let localURL = "http://localhost:3001/images/"
 
 function ImageCards() {
 
@@ -61,7 +64,7 @@ function ImageCards() {
     // useEffect to fetch image data from API!
     useEffect(() => {
         if (matchID !== 'add'){
-        let fetchURL = 'http://localhost:3001/images/' + matchID
+        let fetchURL = localURL + matchID
         const fetchData = async () => {
             setIsError(false)
             setIsLoading(true)

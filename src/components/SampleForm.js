@@ -79,12 +79,15 @@ function SampleForm() {
     const submitAction = e => {
         e.preventDefault()
 
+        console.log(localSample)
+
         if (localSample.id === 0){
             let submitBody = JSON.stringify(localSample)
             dispatch(addSample(submitBody))
             history.push("/")}
         else {
             let submitBody = JSON.stringify(localSample)
+            console.log(submitBody)
             dispatch(putSample(submitBody))
         }
     }

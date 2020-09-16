@@ -14,9 +14,9 @@ const SampleImage = ({imageItem}) => {
 
     const copyToClipboard = () => {
         if (navigator.clipboard) {
-        navigator.clipboard.writeText(imageItem.file_loc).then(
+        navigator.clipboard.writeText(name).then(
             () => {
-                console.log("copy success", imageItem.file_loc)
+                console.log("copy success", name)
             },
             error => console.log(error))}
         else {
@@ -24,7 +24,10 @@ const SampleImage = ({imageItem}) => {
         }
   }
     // use string manipulation to get the image name
-    const name = imageItem.file_loc.split('/').pop().split('.').shift()
+    const name = imageItem.file_loc.split('/').pop()
+
+    const imgURL = "http://ec2-18-191-206-123.us-east-2.compute.amazonaws.com/thin-sections/" + name
+    // const imgURL = "http://localhost:3001/thin-sections/" + name
 
     return (
         <Card >
@@ -33,7 +36,7 @@ const SampleImage = ({imageItem}) => {
                 component="img"
                 alt={imageItem.sampleID}
                 height="256"
-                image={imageItem.file_loc}
+                image={imgURL}
                 title={imageItem.sampleID}
                 />
                 <CardContent>
